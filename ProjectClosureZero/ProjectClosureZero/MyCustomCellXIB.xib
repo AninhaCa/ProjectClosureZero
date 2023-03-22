@@ -22,7 +22,7 @@
                             <constraint firstAttribute="height" constant="21" id="PBb-oh-EIp"/>
                             <constraint firstAttribute="width" constant="288" id="fOt-16-06f"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
