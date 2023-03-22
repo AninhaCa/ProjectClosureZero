@@ -1,0 +1,6 @@
+framework module Pods_ProjectClosureZero {
+  umbrella header "Pods-ProjectClosureZero-umbrella.h"
+
+  export *
+  module * { export * }
+}
