@@ -9,21 +9,29 @@ import UIKit
 
 class PriceViewController: UIViewController {
 
+    @IBOutlet var labelPriceG: UILabel!
+    @IBOutlet var labelPriceM: UILabel!
+    @IBOutlet var labelPriceP: UILabel!
+    @IBOutlet var labelName: UILabel!
+    @IBOutlet var imagePrice: UIImageView!
+    
+    var pricePizza: PizzaElement?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let urlImage = URL(string: pricePizza?.imageURL ?? "")
+        imagePrice.sd_setImage(with: urlImage)
+        labelPriceP.text = "PEQUENA - R$ \(pricePizza?.priceP ?? 0)"
+        labelPriceM.text = "MÉDIA - R$ \(pricePizza?.priceM ?? 0)"
+        labelPriceG.text = "GRANDE - R$ \(pricePizza?.priceG ?? 0)"
+        labelName.text = pricePizza?.name
+    }
+  
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func follow(_ sender: Any) {
+        
     }
-    */
-
 }
